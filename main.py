@@ -1,46 +1,40 @@
-# ☕️ Coffee Order Simulator - Session 3: Data Types and Operators ☕️
-# Welcome to Code Café! Let's take your order using Python.
-# This session is all about how we can talk to Python (input) and how it talks back (output).
+# Print welcome message
+print("🌟 Welcome to the Body Math Institute (BMI) 🌟\n")
+print("Today we'll help you calculate your BMI - Body Mass Index 🏋️‍♂️\n")
 
+# Ask for user's name
+name = input("What is your name? 👤: ")
+# Ask for height in meters (float)
+print("\nPlease enter your height in meters (e.g. 1.75) 📏")
+height = float(input("Height ➡️ "))  # Type casting string input to float
 
-# Print a welcome message
-print("Welcome to Code Café!")
-print("Let's take your order.\n")
-customer_name = input("What is your name? ")
-print("\nWhat type of coffee would you like to order ?")
-print("Options: Espresso, Latte, Cappuccino, Mocha")
-coffee_type = input("Your choice ➡️ ")
-print("\nWould you like to add any toppings? 🍫🍦")
-print("Options: Whipped Cream, Caramel, Chocolate")
-toppings = input("Your choice ➡️ ")
-print("\nWould you like to takeaway or dine-in? 🏃‍♂️🍽️")
-print("Options: Takeaway, Dine-in")
+# Ask for weight in kilograms (float)
+print("\nNow enter your weight in kilograms (e.g. 68.5) ⚖️")
+weight = float(input("Weight ➡️ "))  # Type casting string input to float
+# Calculate BMI using the formula: BMI = weight / (height × height)
+bmi = weight / (height * height)
 
+# Format BMI to two decimal places
+bmi_rounded = round(bmi, 2)
+# Get current date and time
 
-# Ask for the customer's name
+# Print the BMI receipt
+print("\n\n🧾 Generating your BMI Report...\n")
+print("~" * 40)
 
+# Output details
+print("Name:", name, end=" 🧑‍💻\n")
+print("Height:", height, "m", sep=" ", end=" 📏\n")
+print("Weight:", weight, "kg", sep=" ", end=" ⚖️\n")
+print("\nYour BMI is:", bmi_rounded, end=" 🧮\n")
 
-# Ask for coffee type
+# Print basic interpretation
+print("\n\n📌 BMI Categories (for your reference only):")
+print("Underweight: less than 18.5")
+print("Normal: 18.5 - 24.9")
+print("Overweight: 25 - 29.9")
+print("Obese: 30 or more")
 
+# Print date and time
 
-# Ask for extra toppings
-
-
-# Ask for takeaway or dine-in
-
-
-# Print a cute little receipt
-
-
-# Use sep and end for formatting fun
-
-
-
-print("Thank you for ordering from Code Café! 🌈💻")
-print("Your coffee will be ready shortly. Enjoy! 🎉\n")
-
-# 💡 Notes for learners:
-# - input() lets Python take information from the user.
-# - print() displays information back to the user.
-# - You can decorate your output using escape characters like \n (new line) and special parameters like end= and sep=
-# - datetime module helps you work with real-world time and date
+print("Thank you for using the BMI Calculator! Stay healthy! 🌿💪\n")
